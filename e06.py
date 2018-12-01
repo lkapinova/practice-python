@@ -1,3 +1,5 @@
+# https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html
+
 string = input("Enter any word/string: ")
 
 string = str(string)
