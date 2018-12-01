@@ -1,3 +1,5 @@
+# https://www.practicepython.org/exercise/2014/02/15/03-list-less-than-ten.html
+
 a= [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
 b=[]
 
