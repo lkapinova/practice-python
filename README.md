@@ -15,4 +15,5 @@ Repository for excercises from www.practicepython.org.
 * e08.py - Stone paper scissors game
 * e09.py - Guessing and comparing numbers
 * e09_1.py - Guessing numbers, end when the right number is find
-
+* e10.py - List Overlap Comprehensions Solutions (e05, e07)
+* e11.py - Check Primality Functions (using function)
