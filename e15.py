@@ -3,11 +3,11 @@
 string = str(input("Write here a long string: "))
 print(string)
 
+
 def Reverse_str(string):
     string = string.split(" ")
     rev_str = string[-1::-1]
     return rev_str
 
 
-print(Reverse_str(string))
-
+print(" ".join(Reverse_str(string)))
