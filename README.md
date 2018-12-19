@@ -19,3 +19,14 @@ Repository for excercises from www.practicepython.org.
 * e11.py - Check Primality Functions (using function)
 * e12.py - List Ends
 * e13.py - Fibonacci
+* e14.py - List remove duplicates
+* e14_1.py - List remove duplicates - using SET
+* e15.py - Reversed word order
+* e16.py - Password generator
+* e17.py - Decode a web page - The New York Times
+* e17_1.py - Decode a web page - idnes
+* e18.py - Cows and Bulls game
+* e19.py - Decode a web page - article
+* e19_1.py - Decode a web page - headers + article
+* e20.py - Element search in list
+* e20_1.py - Element search in list - using Booleans
