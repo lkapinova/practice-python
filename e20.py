@@ -1,7 +1,8 @@
 # https://www.practicepython.org/exercise/2014/11/11/20-element-search.html
 
-a = [1, 3, 5, 30, 42, 43, 500]
+import random
 
+a = random.sample(range(1, 100), 50)
 
 def element_search(b):
 
@@ -17,6 +18,6 @@ def element_search(b):
             break
 
 
-b = int(input("Enter a number from 0 to 500: "))
+b = int(input("Enter a number from 0 to 100: "))
 
 element_search(b)
