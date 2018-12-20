@@ -1,5 +1,7 @@
 # https://www.practicepython.org/exercise/2014/11/11/20-element-search.html
 
+# to do: random list, ordered list, not changing list lenght
+
 import random
 
 def find(list, number):
