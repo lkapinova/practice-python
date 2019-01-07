@@ -1,5 +1,7 @@
 # https://www.practicepython.org/exercise/2014/11/30/21-write-to-a-file.html
 
+#to do: get rid of symbols
+
 import requests
 from bs4 import BeautifulSoup
 
