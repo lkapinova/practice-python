@@ -1,23 +1,26 @@
 # https://www.practicepython.org/exercise/2014/12/14/23-file-overlap.html
 
-p = []
-h = []
-overlap = []
 
-with open('e23_prime_numbers.txt', 'r') as prime, open('e23_happy_numbers.txt', 'r') as happy:
+def txt_to_list(txt_file):
+    list = []
+    with open(txt_file) as f:
 
-    line = prime.readline()
-    while line:
-        p.append(int(line))
-        line = prime.readline()
+        line = f.readline()
+        while line:
+            list.append(int(line))
+            line = f.readline()
 
-    line = happy.readline()
-    while line:
-        h.append(int(line))
-        line = happy.readline()
+    return list
 
-for item in p:
-    if item in h:
-        overlap.append(item)
 
-print(overlap)
+if __name__ == "__main__":
+
+    p = txt_to_list('e23_prime_numbers.txt')
+    h = txt_to_list('e23_happy_numbers.txt')
+    overlap = []
+
+    for item in p:
+        if item in h:
+            overlap.append(item)
+
+    print(overlap)
