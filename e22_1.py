@@ -6,7 +6,9 @@ with open("e22_1.txt", "r") as open_file:
     line = open_file.readline()
 
     while line:
-        line = line[3:-26]
+        line_split = line.split('/')
+        line_without_filename = line_split [:-1]
+        line = "/".join(line_without_filename)
 
         if line in counter_dict:
             counter_dict[line] += 1
