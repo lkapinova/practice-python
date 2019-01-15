@@ -1,12 +1,9 @@
 # https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html
 
-i = [0,1,2]
-j = [2,1,2]
+i = [1,1,0]
+j = [0,1,2]
 k = [1,1,1]
 matrix = [i, j, k]
-
-print(matrix)
-print(matrix [2][0])
 
 def get_row(matrix,i):
     r = []
@@ -30,6 +27,24 @@ def get_diagonals(matrix):
     return d1, d2
     
 
-print(get_row(matrix,0))
-print(get_column(matrix,2))
-print(get_diagonals(matrix))
+for i in range (3):
+    r = get_row(matrix,i)
+    print("r=", r)
+    if r[0] == r[1] == r[2] and r[i] != 0:
+        print("Winner is player %d." %r[i])
+
+for i in range (3):
+    c = get_column(matrix,i)
+    print("c=", c)
+    if c[0] == c[1] == c[2] and c[i] != 0:
+        print("Winner is player %d." %c[i])
+
+d = get_diagonals(matrix)
+print("d=", d)
+if d[0][0] == d[0][1] == d[0][2] and d[0][0] != 0:
+    print("Winner is player %d." %d[0][0])
+if d[1][0] == d[1][1] == d[1][2] and d[1][0] != 0:
+    print("Winner is player %d." %d[1][1])
+
+
+
