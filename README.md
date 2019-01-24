@@ -30,3 +30,13 @@ Repository for excercises from www.practicepython.org.
 * e19_1.py - Decode a web page - headers + article
 * e20.py - Element search in list
 * e20_1.py - Element search in list - using Booleans
+* e21.py - Write text from web page to txt file
+* e22.py - Read From File - counting names
+* e22_1.py - Read From File - counting files in folders from a list
+* e23.py - File Overlap - comparing prime and happy numbers
+* e24.py - Draw A Game Board
+* e25.py - Guessing Game Two
+* e26.py - Check Tic Tac Toe
+* e27.py - Tic Tac Toe Draw - player input
+* e28.py - Max Of Three 
+* e29.py - Tic Tac Toe Game
