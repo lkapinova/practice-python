@@ -2,10 +2,12 @@
 
 import random
 
+
 def random_word():
     with open('e30.txt') as f:
         words = list(f)
     return random.choice(words).strip()
+
 
 def word_in_dots(word):
     word_lenght = len(word)
@@ -13,13 +15,15 @@ def word_in_dots(word):
     print(word_lenght*a)
     return word_lenght*a
 
-def letter_placing(a,pos,letter_guess):
+
+def letter_placing(a, pos, letter_guess):
     a_as_list = list(a)
     for i in range(0, len(a)):
         if i in pos:
             a_as_list[i] = letter_guess
     print("".join(a_as_list))
     return "".join(a_as_list)
+
 
 def is_new_game_requested():
     while True:
@@ -29,7 +33,8 @@ def is_new_game_requested():
         if new_game == "N":
             return False
         else:
-            print ("Incorrect input.")
+            print("Incorrect input.")
+
 
 def play_game():
 
@@ -40,12 +45,13 @@ def play_game():
 
     while True:
         if a.find('-') != -1:
-            letter_guess = input("Try to find a word. Enter a letter that could be a part of it: ")
+            letter_guess = input(
+                "Try to find a word. Enter a letter that could be a part of it: ")
             pos = []
             if letter_guess in used_letters:
                 print("You have already guessed the letter.")
             if letter_guess not in used_letters:
-                used_letters.append(letter_guess)   
+                used_letters.append(letter_guess)
 
         for n in range(len(word)):
             if word[n] == letter_guess:
@@ -54,19 +60,18 @@ def play_game():
         if pos == []:
             incorrect_guesses += 1
 
-        a = letter_placing(a,pos,letter_guess)
-        
+        a = letter_placing(a, pos, letter_guess)
 
         if incorrect_guesses >= 6:
             print("You have lost the game.")
             return
-    
-        if a.find('-') == -1:
-            print("Great! The word is %s." %a)
-            return
-        
 
-#-----------------------------------------------------------------
+        if a.find('-') == -1:
+            print("Great! The word is %s." % a)
+            return
+
+
+# -----------------------------------------------------------------
 
 if __name__ == "__main__":
 
@@ -74,4 +79,3 @@ if __name__ == "__main__":
         play_game()
         if not is_new_game_requested():
             break
-    
