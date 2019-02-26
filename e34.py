@@ -2,42 +2,56 @@
 
 import json
 
-birthday_list = {
-    "Tom": "27.6.1980",
-    "Anicka": "24.9.2013",
-    "Terezka": "19.10.2016",
-    "Vlada": "21.5.1956",
-    "Jaris": "1.4.1958",
-    "Tana": "18.1.1954",
-    "Mirek": "7.8.1953",
-    "Dada": "11.8.1992",
-    "Luna": "7.6.1980",
-    "Pepi": "10.12.2013",
-    "Jana": "16.1.1980",
-    "Paja": "29.8.1979",
-    "Adam": "24.6.2010",
-    "Kaja": "7.10.2011"
-}
+birthday_list = {}
 
-def add_new_item_json ():
-    new_item = input("Would you like to add birthday of another person? Enter 'Y' for yes or 'N' for no: ")
-    if new_item == "Y":
-        name_inp = input("Enter name: ")
-        date_inp = input("Enter the date of birth: ")
-        data_inp = {name_inp : date_inp}
-        return (data_inp)
-    if new_item == "N":
-        exit
+with open('e34_birthdays.json', 'r') as f:
+    birthday_list = json.load(f)
+
+
+def add_new_entry():
+    name = input("Enter name: ").title()
+    date = input("Enter the date of birth: ").format(name)
+    birthday_list[name] = date
+
+    with open('e34_birthdays.json', 'w') as f:
+        json.dump(birthday_list, f)
+
+    print('{} was added to my birthday list.\n'.format(name))
+
+
+def find_date():
+    name = input("Enter name: ").title()
+
+    try:
+        if birthday_list[name]:
+            print('{} is born on {}\n'.format(name, birthday_list[name]))
+    except KeyError:
+        print('{} is not in the list\n'.format(name))
+
+
+def list_entries():
+    print('The current entries in my birthday list are:\n============================================')
+    for key in birthday_list:
+        print(key.ljust(7), ':', birthday_list[key])
+    print()
+
+# ___________________________________________________________________________________________________________
 
 
 if __name__ == "__main__":
 
-    with open("birthdays.json", "w") as f:
-        json.dump(birthday_list, f)
+    while True:
+        what_next = input(
+            "What do you want to do? You can Add, Find, List and Quit:\n").capitalize()
 
-    data_inp = add_new_item_json()
-    #birthdays.append(data_inp)
-    print(data_inp)
-    dict['birthdays'].append(data_inp)
-
-
+        if what_next == "Add":
+            add_new_entry()
+        elif what_next == "Find":
+            find_date()
+        elif what_next == "List":
+            list_entries()
+        elif what_next == "Quit":
+            print("Good bye!")
+            break
+        else:
+            print("Incorrect input. Try it again.")
