@@ -40,3 +40,10 @@ Repository for excercises from www.practicepython.org.
 * e27.py - Tic Tac Toe Draw - player input
 * e28.py - Max Of Three 
 * e29.py - Tic Tac Toe Game
+* e30.py - Pick a word
+* e31.py - Guess letters
+* e32.py - Hangman game
+* e33.py - Birthday dictionaries
+* e34.py - Birthday json
+* e35.py - Birthday months
+* e36.py - Birthday months plot
